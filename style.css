@@ -1,0 +1,255 @@
+:root {
+--text-colour:#1a1818;
+--link-colour:#0a4aa4;
+--background-colour:#cbeef0;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+}
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  font-family:'Poppins', sans-serif;
+  background-color: var(--background-colour);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+a{
+  color: var(--link-colour);
+  text-decoration: none;
+}
+
+/*NAVBAR*/
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  height: 80px;
+
+}
+
+nav .left a{
+  color: var(--text-colour);
+  font-size: 25px;
+  font-weight: 600;
+}
+
+nav .right a{
+  color: var(--text-colour);
+ margin: 0px 10px;
+}
+
+nav .right a:last-child{
+  color: var(--background-colour);
+  background-color: var(--text-colour);
+  padding: 5px 15px;
+  border-radius: 5px
+}
+
+nav .right a span{
+margin-left: 5px;
+}
+
+/* SECTION 1:About*/
+.About-section{
+  display:flex;
+  justify-content:space-between;
+  align-items: center;
+  padding: 0 50px;
+  margin: 50px 0;
+  margin-bottom: 100px;
+  gap: 40px;
+}
+
+.About-section .text{
+flex: 5;
+}
+
+.About-section .text h2{
+  font-size: 35px;
+  }
+  
+  .About-section .text .links{
+    margin-top: 25px;
+    }  
+
+    .About-section .text .links a {
+      display: inline-block;
+      padding: 5px 10px;
+      border:2px solid var(--link-colour);
+      border-radius: 5px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      transition: 0.1s;
+      }  
+      .About-section .text .links a:hover {
+        color:var(--text-colour);
+        border: 2px solid var(--text-colour);
+      }
+
+  .About-section .headshot{
+  flex: 2;
+  display: flex;
+  justify-content: right;
+  }
+
+  .About-section .headshot img{
+    width: 50px;
+    border-radius: 50%;
+  }
+
+  /*section 2: Skills*/
+  .skills-section{
+    padding: 0 50px;
+    margin-bottom: 100px;
+  }
+  .skills-section h2{
+    text-align: center;
+    font-size: 35px;
+  }
+
+  .skills-section text{
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .skills-section .cells{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .skills-section .cells .cells{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    width: 200px;
+    padding: 10px 20px ;
+    margin: 10px;
+    border: 1.5px solid rgb(133, 133, 133);
+    border-radius: 5px;
+  }
+
+  .skills-section .cells .cells img{
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    border-radius:2px;
+  }
+ 
+  .skills-section .cells .cells spam{
+font-size: 18px;
+  }
+  .contact-section {
+    padding: 0 50px;
+    margin-bottom: 100px;
+  }
+  
+  .contact-section h2 {
+    font-size: 35px;
+  }
+  
+  .contact-section .group {
+    display: flex;
+    gap: 50px;
+  }
+  
+  .contact-section .group .text {
+    flex: 3;
+    margin-top: 20px;
+  }
+  
+  .contact-section .group form {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact-section .group form input,
+  .contact-section .group form textarea {
+    font-family: 'Poppins', sans-serif;
+    border: 2px solid grey;
+    background-color: transparent;
+    padding: 10px;
+    margin-bottom: 15px;
+    outline: none;
+    resize: none;
+  }
+  
+  .contact-section .group form button {
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    color: #4f4e4e;
+    background-color: var(--link-colo);
+    border: none;
+    height: 50px;
+    cursor: pointer;
+    transition: .1s;
+  }
+  
+  .contact-section .group form button:hover {
+    filter: brightness(.9);
+
+@media(max-width:850px){
+  /*SECTION 1:ABOUT*/
+  .About-section{
+    flex-direction: column-reverse; 
+  }
+  .About-section .headshot img{
+    width: 300px;
+  }
+}
+
+
+@media(max-width:740px){
+  /*SECTION 1:ABOUT*/
+  .About-section .text h2{
+    font-size: 35px;
+  }
+}
+
+@media(max-width:600px){
+/*NAVBAR*/
+  nav{
+    Padding:0 20px;
+  }
+
+  nav .right a{
+    font-size:22px;
+  }
+    nav .right a:last-child{
+      color: var(--text-colour);
+      background-color: transparent;
+      padding: 0px;
+  
+  }
+  nav.right a span{
+    display: none;
+  }
+
+  /*Section 1 About */
+  .hero-section{
+    padding: 0 20px;
+  }
+  .hero-section .text h2{
+    font-size: 30px;
+  }
+
+  /*section 2: Skills*/
+  .skills-section{
+    padding: o 20px;
+  }
+  .skills-section .cells .cells span{
+font-size: 16px;
+  }
+  }
+  }
